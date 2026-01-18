@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
+
 <body>
-    
+  <div class="form-container">
+    <form id="myForm">
+      <label for="name">Full Name:</label>
+      <input type="text" name="name" id="name" placeholder="Your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Your email" required>
+
+      <button id="submit-btn" type="submit">Send Email</button>
+    </form>
+
+    <p id="status-msg" class="status-msg"></p>
+  </div>
+
+  <!-- Link JS -->
+  <script src="pr.js"></script>
 </body>
 </html>
