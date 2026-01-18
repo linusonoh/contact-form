@@ -3,31 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Form</title>
-
-  <!-- Link CSS -->
+  <title>Contact Me | Linus Onnoh</title>
   <link rel="stylesheet" href="style.css">
-
+  
   <!-- EmailJS CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() { emailjs.init("YOUR_EMAILJS_USER_ID"); })();
+  </script>
 </head>
-
 <body>
-  <div class="form-container">
-    <form id="myForm">
-      <label for="name">Full Name:</label>
-      <input type="text" name="name" id="name" placeholder="Your name" required>
 
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" placeholder="Your email" required>
+  <div class="contact-section">
+    <h2>Contact Me</h2>
+    <p>Have a project or just want to say hi? Fill out the form below!</p>
 
-      <button id="submit-btn" type="submit">Send Email</button>
+    <form id="contactForm" class="contact-form">
+      <div class="form-group">
+        <input type="text" id="name" name="name" required placeholder=" ">
+        <label for="name">Full Name *</label>
+        <div class="error" id="nameError"></div>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" name="email" required placeholder=" ">
+        <label for="email">Email *</label>
+        <div class="error" id="emailError"></div>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" id="phone" name="phone" placeholder=" ">
+        <label for="phone">Phone</label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="subject" name="subject" required placeholder=" ">
+        <label for="subject">Subject *</label>
+        <div class="error" id="subjectError"></div>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" name="message" required placeholder=" "></textarea>
+        <label for="message">Message *</label>
+        <div class="error" id="messageError"></div>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
     </form>
 
-    <p id="status-msg" class="status-msg"></p>
+    <div class="confirmation" id="confirmationMessage">
+      Thank you! Your message has been sent successfully.
+    </div>
   </div>
 
-  <!-- Link JS -->
-  <script src="pr.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
