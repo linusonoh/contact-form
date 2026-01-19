@@ -1,28 +1,28 @@
-// Initialize EmailJS FIRST (VERY IMPORTANT)
+
 (function () {
   emailjs.init("t-0sRjENbSBUjrPmU");
 })();
 
-// Get form and confirmation message
+
 const form = document.getElementById('contactForm');
 const confirmation = document.getElementById('confirmationMessage');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  // Clear previous errors
+  
   document.querySelectorAll('.error').forEach(el => el.textContent = '');
 
   let hasError = false;
 
-  // Get form values
+  
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const phone = document.getElementById('phone').value.trim();
   const subject = document.getElementById('subject').value.trim();
   const message = document.getElementById('message').value.trim();
 
-  // Validation
+ 
   if (name.length < 2) {
     document.getElementById('nameError').textContent = 'Please enter your name';
     hasError = true;
@@ -44,7 +44,7 @@ form.addEventListener('submit', function (e) {
     hasError = true;
   }
 
-  // Send email via EmailJS
+  
   if (!hasError) {
     emailjs.send(
       "service_hq9y1lj",

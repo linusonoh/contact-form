@@ -1,4 +1,4 @@
-/* ===== BODY ===== */
+
 body {
   font-family: Arial, sans-serif;
   background: #f7f7f7;
@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 
-/* ===== CONTACT SECTION ===== */
+
 .contact-section {
   max-width: 600px;
   margin: 100px auto;
@@ -30,7 +30,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* ===== FORM ===== */
+
 .contact-form .form-group {
   position: relative;
   margin-bottom: 25px;
@@ -77,13 +77,13 @@ body {
   color: #0b2a3a;
 }
 
-/* Textarea */
+
 .contact-form textarea {
   resize: vertical;
   min-height: 120px;
 }
 
-/* Error messages */
+
 .error {
   color: red;
   font-size: 13px;
@@ -91,7 +91,7 @@ body {
   margin-top: 5px;
 }
 
-/* Submit button */
+
 .submit-btn {
   background: rgba(33, 150, 243, 0.5);
   color: #fff;
@@ -111,7 +111,7 @@ body {
   background: rgba(33,150,243,0.7);
 }
 
-/* Confirmation message */
+
 .confirmation {
   margin-top: 20px;
   padding: 14px;
@@ -124,7 +124,7 @@ body {
   font-weight: bold;
 }
 
-/* ===== MOBILE ===== */
+
 @media (max-width: 600px) {
   .contact-section {
     margin: 50px 20px;
