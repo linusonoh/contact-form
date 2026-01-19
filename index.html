@@ -4,13 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Me | Linus Onnoh</title>
+
   <link rel="stylesheet" href="style.css">
-  
-  <!-- EmailJS p CDN -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function() { emailjs.init("8kHelD8tdFbmbD2KA"); })();
-  </script>
+
+  <!-- ✅ CORRECT EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -20,30 +18,30 @@
 
     <form id="contactForm" class="contact-form">
       <div class="form-group">
-        <input type="text" id="name" name="name" required placeholder=" ">
+        <input type="text" id="name" placeholder=" " required>
         <label for="name">Full Name *</label>
         <div class="error" id="nameError"></div>
       </div>
 
       <div class="form-group">
-        <input type="email" id="email" name="email" required placeholder=" ">
+        <input type="email" id="email" placeholder=" " required>
         <label for="email">Email *</label>
         <div class="error" id="emailError"></div>
       </div>
 
       <div class="form-group">
-        <input type="tel" id="phone" name="phone" placeholder=" ">
+        <input type="tel" id="phone" placeholder=" ">
         <label for="phone">Phone</label>
       </div>
 
       <div class="form-group">
-        <input type="text" id="subject" name="subject" required placeholder=" ">
+        <input type="text" id="subject" placeholder=" " required>
         <label for="subject">Subject *</label>
         <div class="error" id="subjectError"></div>
       </div>
 
       <div class="form-group">
-        <textarea id="message" name="message" required placeholder=" "></textarea>
+        <textarea id="message" placeholder=" " required></textarea>
         <label for="message">Message *</label>
         <div class="error" id="messageError"></div>
       </div>
@@ -56,6 +54,7 @@
     </div>
   </div>
 
+  <!-- JS LAST -->
   <script src="script.js"></script>
 </body>
 </html>
